@@ -1,1 +1,8 @@
-/* TODO: Make it awesome */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(61,164,155);
+  background: linear-gradient(90deg, rgba(61,164,155,1) 5%, rgba(240,203,94,1) 100%, rgba(0,36,19,0) 100%);
+}
