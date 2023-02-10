@@ -45,7 +45,7 @@ Cart.prototype.updateCounter = function() {
   })
 
   let itemCount = document.querySelector('#itemCount');
-  itemCount.innerText = total;
+  itemCount.innerText = `  (${total})`;
 }
 
 const CartItem = function(product, quantity) {

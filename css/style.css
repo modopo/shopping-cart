@@ -3,6 +3,69 @@
 }
 
 body {
-  background: rgb(61,164,155);
-  background: linear-gradient(90deg, rgba(61,164,155,1) 5%, rgba(240,203,94,1) 100%, rgba(0,36,19,0) 100%);
+  background: #fefae0;
+}
+
+header {
+  background-color: #283618;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  font-family: 'Saira', sans-serif;
+  color: #fefae0;
+}
+
+h1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  color: #dda15e;
+}
+
+ul li {
+  font-family: 'Saira', sans-serif;
+  color: #fefae0;
+  text-decoration: none;
+  align-items: center;
+}
+
+/* Table */
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  margin: 1rem;
+}
+
+td, th {
+  padding: 1rem;
+}
+
+th {
+  font-weight: bold;
+}
+
+tfoot {
+  background-color: #f7bfa1;
 }

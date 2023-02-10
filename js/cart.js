@@ -15,6 +15,7 @@ function renderCart() {
   loadCart();
   clearCart();
   showCart();
+  state.cart.updateCounter();
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
@@ -45,7 +46,7 @@ function showCart() {
     let deleteLink = document.createElement('a');
     deleteLink.href = "";
     deleteLink.id = cartItem.product;
-    deleteLink.innerText = 'Remove';
+    deleteLink.innerText = 'X';
     remove.appendChild(deleteLink);
 
     quantity.innerText = cartItem.quantity;

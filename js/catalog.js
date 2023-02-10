@@ -40,9 +40,13 @@ function addSelectedItemToCart() {
 
   let dropDown = document.getElementById('items');
   let selectedItems = dropDown.options[dropDown.selectedIndex].value;
-  let quanInput = document.getElementById('quantity').value;
+  let quantInput = document.getElementById('quantity').value;
+
+  if (!quantInput) {
+    quantInput = 0;
+  }
   
-  state.cart.addItem(selectedItems, quanInput);
+  state.cart.addItem(selectedItems, quantInput);
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
@@ -73,3 +77,4 @@ catalogForm.addEventListener('submit', handleSubmit);
 
 populateForm();
 updateCartPreview();
+state.cart.updateCounter();
