@@ -3,7 +3,8 @@
 'use strict';
 
 // Set up an empty cart for use on this page.
-state.cart = new Cart([]);
+const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+state.cart = new Cart(cartItems);
 
 // On screen load, we call this method to put all of the product options
 // (the things in the state.allProducts array) into the drop down list.
@@ -23,7 +24,6 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-
   // TODO: Prevent the page from reloading
   event.preventDefault();
 
@@ -32,7 +32,6 @@ function handleSubmit(event) {
   state.cart.saveToLocalStorage();
   state.cart.updateCounter();
   updateCartPreview();
-
 }
 
 // TODO: Add the selected item and quantity to the cart
@@ -71,4 +70,6 @@ catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
+
 populateForm();
+updateCartPreview();
