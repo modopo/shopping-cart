@@ -24,6 +24,7 @@ function clearCart() {}
 function showCart() {
 
   // TODO: Find the table body
+  let tbody = document.querySelector('tbody');
 
   // TODO: Iterate over the items in the cart
   // TODO: Create a TR
